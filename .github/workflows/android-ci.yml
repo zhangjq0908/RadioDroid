@@ -27,3 +27,14 @@ jobs:
         java-version: 11
     - name: Tests
       run: bash ./gradlew build --stacktrace
+          # Build the APK
+    - name: Build APK
+      run: ./gradlew assembleRelease
+
+    # Upload the APK as an artifact
+    - name: Upload APK
+      uses: actions/upload-artifact@v2
+      with:
+        name: my-app-release
+        path: app/build/outputs/apk/release/app-release.apk  # Replace this with your actual APK path
+
