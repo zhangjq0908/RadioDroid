@@ -36,5 +36,5 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: my-app-release
-        path: app/build/outputs/apk/release/app-release.apk  # Replace this with your actual APK path
+        path: app/build/outputs/  # Replace this with your actual APK path
 
